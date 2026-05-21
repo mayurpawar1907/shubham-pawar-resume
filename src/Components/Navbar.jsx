@@ -107,7 +107,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#1c1c2bcc] backdrop-blur-md text-white px-6 sm:px-8 py-5 shadow-lg z-50">
+    <nav className="fixed top-0 left-0 w-full bg-[#1c1c2bcc] backdrop-blur-md text-white px-6 sm:px-8 py-5 shadow-lg z-[9999]">
       <div className="flex items-center justify-between">
         {/* 👤 Logo & Name */}
         <div className="flex flex-col">
@@ -147,7 +147,7 @@ function Navbar() {
 
       {/* 📱 Mobile Menu Items */}
       {isOpen && (
-        <ul className="md:hidden flex flex-col gap-4 mt-4 text-lg font-medium bg-[#1c1c2b] border-t border-gray-600 pt-4 pb-2 px-2">
+        <ul className="md:hidden flex flex-col gap-4 mt-4 text-lg font-medium bg-[#1c1c2b] border-t border-gray-600 pt-4 pb-2 px-2 relative z-[9998]">
           <li><NavLink to="/" className={navStyle} onClick={toggleMenu}>Home</NavLink></li>
           <li><NavLink to="/about" className={navStyle} onClick={toggleMenu}>About</NavLink></li>
           <li><NavLink to="/skills" className={navStyle} onClick={toggleMenu}>Skills</NavLink></li>

@@ -19,11 +19,26 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      showTooltip("❌ Please enter a valid email address.", "error");
+      return;
+    }
+
+    const templateParams = {
+      to_email: "shubhampatil.sp25597@gmail.com",  // Your email where you'll receive messages
+      from_name: formData.name,                     // Sender's name (who filled the form)
+      user_name: formData.name,                     // Sender's name for template
+      user_email: formData.email,                   // Sender's email for template
+      message: formData.message,                    // Message content
+    };
+
     emailjs.send(
-      "service_vn5tmti",      // ✅ Your EmailJS service ID
-      "template_gh8mkea",     // ✅ Your template ID
-      formData,
-      "IYEGKtO5QQu6w-khR"     // ✅ Your public key
+      "service_zfw5k6s",      // ✅ Your EmailJS service ID
+      "template_rd2grxp",     // ✅ Your template ID
+      templateParams,
+      "qJk3FzFTndE2oxD6h"     // ✅ Your public key
     )
     .then(() => {
       showTooltip("✅ Message sent successfully!", "success");
