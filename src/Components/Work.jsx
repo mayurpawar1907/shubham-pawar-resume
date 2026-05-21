@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BsPatchCheckFill } from 'react-icons/bs';
@@ -45,25 +46,50 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
 };
 
 const ProjectOverview = () => {
   return (
     <motion.div
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
+      animate="show"
       variants={containerVariants}
       style={{ width: '100%', paddingTop: '100px' }}
-      className="overflow-x-hidden  shadow-[0_0_40px_#00f0ff33] p-6 md:p-10 bg-gradient-to-br from-[#0f0f1b] to-[#121223] border border-cyan-500/20"
+      className="
+        overflow-hidden
+        shadow-[0_0_20px_#00f0ff22]
+        p-4
+        sm:p-6
+        md:p-10
+        bg-gradient-to-br
+        from-[#0f0f1b]
+        to-[#121223]
+        border
+        border-cyan-500/20
+      "
     >
       {/* Heading */}
       <motion.h3
         initial={{ opacity: 0, y: -40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-cyan-400 mb-6 text-center"
+        className="
+          text-2xl
+          sm:text-3xl
+          md:text-4xl
+          font-bold
+          text-cyan-400
+          mb-6
+          text-center
+          leading-snug
+        "
       >
         Enterprise SaaS & Drone Software Development
       </motion.h3>
@@ -71,9 +97,15 @@ const ProjectOverview = () => {
       {/* Subheading */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="text-gray-100 text-center text-base mb-8"
+        className="
+          text-gray-100
+          text-center
+          text-sm
+          sm:text-base
+          mb-8
+        "
       >
         Key Projects & Technical Achievements:
       </motion.p>
@@ -81,22 +113,62 @@ const ProjectOverview = () => {
       {/* List */}
       <motion.ul
         variants={containerVariants}
-        className="space-y-6"
+        className="space-y-5 md:space-y-6"
       >
         {projectDetails.map((item, i) => (
           <motion.li
             key={i}
             variants={itemVariants}
-            className="flex items-start gap-4 bg-[#1a1a2b] hover:bg-[#23233a] p-5 rounded-lg transition-all duration-300 border border-cyan-400/10"
+            whileHover={{
+              scale: 1.01,
+            }}
+            className="
+              flex
+              items-start
+              gap-3
+              sm:gap-4
+              bg-[#1a1a2b]
+              hover:bg-[#23233a]
+              p-4
+              sm:p-5
+              rounded-xl
+              transition-all
+              duration-300
+              border
+              border-cyan-400/10
+              shadow-md
+              hover:shadow-cyan-500/10
+            "
           >
-            <span className="text-cyan-400 mt-1 animate-pulse">
-              <BsPatchCheckFill size={20} />
+            {/* Icon */}
+            <span className="text-cyan-400 mt-1 shrink-0 animate-pulse">
+              <BsPatchCheckFill size={18} />
             </span>
-            <div>
-              <h4 className="text-cyan-300 font-semibold text-lg mb-1">
+
+            {/* Content */}
+            <div className="w-full overflow-hidden">
+              <h4
+                className="
+                  text-cyan-300
+                  font-semibold
+                  text-base
+                  sm:text-lg
+                  mb-2
+                  break-words
+                "
+              >
                 {item.title}
               </h4>
-              <p className="text-gray-300 text-base leading-relaxed">
+
+              <p
+                className="
+                  text-gray-300
+                  text-sm
+                  sm:text-base
+                  leading-relaxed
+                  break-words
+                "
+              >
                 {item.text}
               </p>
             </div>
