@@ -66,7 +66,7 @@
               className="flex justify-center md:justify-start space-x-4 mb-6"
             >
               <motion.a
-                href="https://instagram.com/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3, rotate: 10 }}
@@ -80,7 +80,7 @@
               </motion.a>
 
               <motion.a
-                href="https://twitter.com/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3, rotate: 10 }}
@@ -94,7 +94,7 @@
               </motion.a>
 
               <motion.a
-                href="https://github.com/mayurPatil1907"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3, rotate: 10 }}
@@ -108,7 +108,7 @@
               </motion.a>
 
               <motion.a
-                href="https://www.linkedin.com/in/mayur-Patil-8246402b8/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3, rotate: 10 }}
