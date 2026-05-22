@@ -66,7 +66,7 @@
               className="flex justify-center md:justify-start space-x-4 mb-6"
             >
               <motion.a
-                href=""
+                href="https://www.instagram.com/shubham_patil_255?igsh=MjRlYzFzeHA5aGZn"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3, rotate: 10 }}
@@ -79,36 +79,12 @@
                 <FaInstagram />
               </motion.a>
 
-              <motion.a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="bg-[#24243c] hover:bg-cyan-500 p-3 rounded-full transition"
-              >
-                <FaTwitter />
-              </motion.a>
+             
+
+              
 
               <motion.a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="bg-[#24243c] hover:bg-cyan-500 p-3 rounded-full transition"
-              >
-                <FaGithub />
-              </motion.a>
-
-              <motion.a
-                href=""
+                href="https://www.linkedin.com/in/shubhampatil-mobiledev?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.3, rotate: 10 }}
